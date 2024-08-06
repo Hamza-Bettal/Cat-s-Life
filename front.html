@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Words raining</title>
+    <style>
+        body
+        {
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+        }
+        canvas
+        {
+            display: block;
+            background-color: #111;
+        }
+        .input-box
+        {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .input-box input
+        {
+            font-size: 24px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <div class="input-box">
+        <input type="text" id="input_word" autofocus>
+    </div>
+    <script src="logic.js"></script>
+</body>
+</html>
