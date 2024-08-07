@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <title>Words raining</title>
+    <style>
+        body
+        {
+            margin: 0;
+            overflow: hidden;
+            font-family: 'VT323', monospace;
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+        }
+        canvas
+        {
+            display: 50%;
+            background-color: #111;
+        }
+        button
+        {
+            font-size: 80px;
+            background-color: #111;
+            color: lightblue;
+            margin: 20px;
+            border-radius: 15px;
+            padding: 5px;
+            font-family: 'VT323', monospace;
+        }
+        .input-box
+        {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .input-box input
+        {
+            border-radius: 10px;
+            background-color: #111;
+            color: lightblue;
+            font-family: 'VT323', monospace;
+            font-size: 50px;
+            padding: 5px;
+        }
+        .score
+        {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 44px;
+        }
+        .scorefont
+        {
+            font-size: 44px;
+            font-family: 'VT323', monospace;
+        }
+        #loseScreen
+        {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <div class="input-box">
+        <input type="text" id="input_word" autofocus autocomplete="off">
+    </div>
+    <div class="score" id="scorebar">Score: 0</div>
+    <div id="loseScreen">
+        <div class="scorefont" style="font-size: 150px;">You Lose!</div><br><br>
+        <div id="scoreDisplay" class="scorefont"></div><br>
+        <div id="highScoreDisplay" class="scorefont"></div><br>
+        <button onclick="restartGame()">restart</button><br>
+        <button onclick="window.location='Levels.html'">change difficulty</button><br>
+        <button onclick="window.location='startPage.html'">back</button>
+    </div>
+    <script src="logic.js"></script>
+</body>
+</html>

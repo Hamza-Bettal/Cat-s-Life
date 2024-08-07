@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <title>Words raining</title>
+    <style>
+        body
+        {
+            margin: 0;
+            overflow: hidden;
+            font-family: 'VT323', monospace;
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+        }
+        h1
+        {
+            font-size: 100px;
+            margin-top: 100px;
+            font-family: 'VT323', monospace;
+        }
+        button
+        {
+            margin: 15px;
+            font-size: 80px;
+            background-color: #111;
+            color: white;
+            border-radius: 15px;
+            padding: 5px;
+            font-family: 'VT323', monospace;
+        }
+        button:hover
+        {
+            cursor: pointer;
+            background-color: black;
+            color: #111;
+            transition: 1s;
+        }
+        button:active
+        {
+            transition: 0.2s;
+            background-color: #111;
+            color: white;
+        }
+        @keyframes rainbow
+        {
+            0% { background-color: red; }
+            14% { background-color: orange; }
+            28% { background-color: yellow; }
+            42% { background-color: green; }
+            57% { background-color: blue; }
+            71% { background-color: indigo; }
+            85% { background-color: violet; }
+            100% { background-color: red; }
+        }
+    </style>
+</head>
+<body>
+    <h1>difficulty</h1>
+    <button onclick="window.location='game.html?level=1'" style="background-color: lightgreen; ">Easy</button><br>
+    <button onclick="window.location='game.html?level=1.5'" style="background-color: lightsalmon;">Medium</button><br>
+    <button onclick="window.location='game.html?level=2'" style="background-color: red;">Hard</button><br>
+    <button onclick="window.location='game.html?level=3'" style="background-color: rgb(247, 14, 247);">Insane</button><br>
+    <button onclick="window.location='game.html?level=4'" style="animation: rainbow 1s infinite linear;">Impossible</button><br>
+    <button onclick="window.location='startPage.html'" style="color: lightblue;">Back</button>
+</body>
+</html>
