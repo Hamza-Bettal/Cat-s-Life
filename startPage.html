@@ -1,52 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <title>Words raining</title>
+    <title>Quick Type, Cat's Life</title>
     <style>
-        body
-        {
+        body {
             margin: 0;
             overflow: hidden;
             font-family: 'VT323', monospace;
-            background-color: #111;
+            background-color: #000;
             color: #fff;
             text-align: center;
+            background-image: url('path/to/your/background-image.jpg'); /* Add path to your background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+   	 		user-select: none; 
         }
-        h1
-        {
-            font-size: 150px;
-            margin-top: 100px;
-            font-family: 'VT323', monospace;
+        h1 {
+            font-size: calc(4rem + 2vw);
+            margin: 5% 0;
+            color: #FFCC00;
+			text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
         }
-        button
-        {
-            font-size: 80px;
-            width: 500px;
-            background-color: #111;
+        .button-container {
+			display: flex;
+   			flex-direction: column; 
+   			align-items: center;    
+   			justify-content: center; 
+			margin-top: 2rem;
+        }
+        button {
+            font-size: 60px;
+            width: 30%;
+            max-width: 700px;
+            min-width: 400px; 
+            background-color: #222;
             color: lightblue;
             border-radius: 15px;
-            padding: 5px;
+            padding: 10px;
+            border: none;
+            margin: 10px;
             font-family: 'VT323', monospace;
         }
-        button:hover
-        {
+        button:hover {
             cursor: pointer;
             background-color: lightblue;
-            color: #111;
-            transition: 1s;
+            color: #222;
+            transition: 0.5s;
+			transform: scale(1.05);
         }
-        button:active
-        {
-            transition: 0.2s;
+        button:active {
+            transition: 0.1s;
             background-color: #111;
             color: lightblue;
         }
+		@media (max-width: 768px) {
+            button {
+                width: 70%;
+                font-size: 40px;
+            }
+		}
+
     </style>
 </head>
 <body>
-    <h1>Words raining</h1>
-    <button onclick="window.location='Levels.html'">start</button><br><br><br><br>
-    <p style="font-size: 50px;">an evil creature is trying to kill our cat!!<br><br>SAVE THE CAT!!</p>
+    <h1>Quick Type, Cat's Life</h1>
+    
+    <div class="button-container">
+        <button onclick="window.location='levels.html'">Start Game</button>
+        <button onclick="window.location='description.html'">Description</button>
+        <button onclick="window.location='highscores.html'">High Scores</button>
+        <button onclick="window.location='settings.html'">Settings</button>
+        <button onclick="window.location='quit.html'">Quit</button>
+    </div>
 </body>
 </html>

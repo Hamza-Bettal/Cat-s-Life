@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <title>About Quick Type, Cat's Life</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'VT323', monospace;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            background-image: url('path/to/your/background-image.jpg'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            user-select: none;
+        }
+        h1 {
+            font-size: calc(4rem + 2vw);
+            margin: 5% 0;
+            color: #FFCC00;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+			margin-top: 2rem;
+        }
+        .description-card {
+            background-color: rgba(50, 50, 50, 0.8); 
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 80%;
+            margin: 20px auto;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+			border: 2px solid lightblue;
+        }
+        .description {
+            font-size: 1.4rem;
+            margin: 0;
+            line-height: 1.6;
+            color: #e0e0e0;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+        }
+        button {
+            color: lightblue; 
+            font-family: 'VT323', monospace;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            display: inline-block;
+            border: 2px solid lightblue;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: #333;
+        }
+        button:hover {
+            background-color: lightblue;
+            color: #222;
+			transition: 0.5s;
+			cursor: pointer;
+			transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>About Quick Type, Cat's Life</h1>
+    
+    <div class="container">
+        <div class="description-card">
+            <p class="description">
+                <strong>Welcome to Quick Type, Cat's Life!</strong><br><br>
+                Our lovable cat is under threat as words rain down from above. Your typing skills are the only thing standing between the cat and danger.<br><br>
+                <em>Keep the cat safe by typing each word before it hits the cat. The faster you type, the better you protect your furry friend!</em><br><br>
+                <strong>Get ready for a typing challenge like no other. Can you save the cat?</strong>
+            </p>
+        </div>
+        <button onclick="window.location='startPage.html'">Back to Home</button>
+    </div>
+</body>
+</html>
+
+
