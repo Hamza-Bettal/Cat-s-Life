@@ -1,6 +1,7 @@
 let params = new URLSearchParams(window.location.search);
 console.log(params);
 let level = params.get('level');
+scorelvl = level;
 const salam = localStorage.setItem('currentlevel', level);
 const canvas = document.getElementById('gameCanvas');
 const score_display = document.getElementById('scorebar');
@@ -44,24 +45,19 @@ class Player
     {
         this.nextpos = x;
     }
-    draw()
-    {
-        ctx.beginPath();
-        ctx.arc(this.x, canvas.height - 100, 40, 0, Math.PI * 2, false);
-        ctx.fillStyle = 'yellow';
-        ctx.fill();
-    }
     update()
     {
         if (this.nextpos !== null)
         {
             const direction = this.nextpos > this.x ? 1 : -1;
-            this.x += direction * 50;
+            this.x += direction * 10;
             if (direction === 1 && this.x >= this.nextpos || direction === -1 && this.x <= this.nextpos)
             {
                 this.nextpos = null;
             }
         }
+        const inputBar = document.getElementById('inputBox');
+        inputBar.style.left = (this.x + 55) + 'px';
     }
 }
 class Asteroid
@@ -86,43 +82,50 @@ class Asteroid
 }
 
 var xrandom = [];
+let k = 0;
+let firstpos = Math.random() * (canvas.width) * 0.9;
 
-function spawnAsteroid()
+function spawnAsteroid(k)
 {
-    xrandom.push(Math.random() * (canvas.width) * 0.9);
+    if (k !== 0)
+        xrandom.push(Math.random() * (canvas.width) * 0.9);
+    else
+        xrandom.push(firstpos);
     const word = words[Math.floor(Math.random() * words.length)];
     asteroids.push(new Asteroid(word, xrandom[xrandom.length - 1] , -80, wordspeed));
     console.log(xrandom);
 }
 
-let player = new Player(200);
+let player = new Player(firstpos);
 function updateGame()
 {
     let i = 0;
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    player.update(xrandom[0]);
-    player.draw();
     while (i < asteroids.length)
     {
         const asteroid = asteroids[i];
         asteroid.update();
         asteroid.draw();
+        player.update();
         if (asteroid.word === inputWord.trim())
         {
             xrandom.splice(i, 1);
             player.update(xrandom[0]);
-            player.draw();
             player.moveto(xrandom[0]);
             asteroids.splice(i, 1);
             inputWord = "";
             wordInput.value = "";
-            score += 10 * level;
+            score += 10 * scorelvl;
             score_display.innerText = 'Score: ' + score;
+            level += 0.02;
             i--;
         }
-        if (asteroid.y > canvas.height - 140)
+        if (asteroid.y > canvas.height - 210)
         {
+            const img = document.getElementById('cat');
+            img.style = 'width: 210px; margin-right: 90px;';
+            img.src = 'kitnnhit.png';
             if (score > localStorage.getItem('highScore'))
                 localStorage.setItem('highScore', score);
             if (highScore === null)
@@ -150,5 +153,11 @@ function updateInputWord(event)
     inputWord = event.target.value;
 }
 
-setInterval(spawnAsteroid, spawnlevel);
+function usless()
+{
+    spawnAsteroid(k);
+    k++;
+}
+
+setInterval(usless, spawnlevel);
 updateGame();

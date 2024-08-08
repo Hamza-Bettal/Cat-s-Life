@@ -37,7 +37,8 @@
         {
             position: absolute;
             bottom: 10px;
-            left: 50%;
+            width: 0%;
+            left: 0%;
             transform: translateX(-50%);
         }
         .input-box input
@@ -46,6 +47,7 @@
             background-color: #111;
             color: lightblue;
             font-family: 'VT323', monospace;
+            width: 250px;
             font-size: 50px;
             padding: 5px;
         }
@@ -73,7 +75,8 @@
 </head>
 <body>
     <canvas id="gameCanvas"></canvas>
-    <div class="input-box">
+    <div class="input-box" id="inputBox">
+        <img id="cat" src="kitnn.png" style="height: 200px; margin-left: 50px;">
         <input type="text" id="input_word" autofocus autocomplete="off">
     </div>
     <div class="score" id="scorebar">Score: 0</div>
