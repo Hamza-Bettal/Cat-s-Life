@@ -1,15 +1,14 @@
 let params = new URLSearchParams(window.location.search);
-console.log(params);
 let level = params.get('level');
 scorelvl = level;
-const salam = localStorage.setItem('currentlevel', level);
+document.getElementById('song').loop = true;
+document.getElementById('song').volume = 0.3;
 const canvas = document.getElementById('gameCanvas');
 const score_display = document.getElementById('scorebar');
 const timer_display = document.getElementById('timerbar');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth - 300;
 canvas.height = window.innerHeight;
-console.log(canvas.height)
 let highScore = localStorage.getItem('highScore');
 
 const words = ["cat", "dog", "bird", "fish", "tree", "house", "car", "bike", "road", "sky",
@@ -30,7 +29,6 @@ let score = 0;
 
 const spawnlevel = 2000 / level;
 const wordspeed = 1 * level;
-const asteroidFrequency = 2000 / level;
 const wordInput = document.getElementById('input_word');
 
 canvas.style = `width: ${canvas.width}px; height: ${canvas.height}px;`;
@@ -110,6 +108,9 @@ function updateGame()
         player.update();
         if (asteroid.word === inputWord.trim())
         {
+            sound = document.getElementById('kill');
+            sound.load();   
+            sound.play();
             xrandom.splice(i, 1);
             player.update(xrandom[0]);
             player.moveto(xrandom[0]);
@@ -123,6 +124,11 @@ function updateGame()
         }
         if (asteroid.y > canvas.height - 210)
         {
+            var sound = document.querySelector('#song');
+            sound.src = 'die.mp3';
+            sound.load();   
+            sound.play();
+            sound.loop = false;
             const img = document.getElementById('cat');
             img.style = 'width: 210px; margin-right: 90px;';
             img.src = 'kitnnhit.png';
@@ -153,11 +159,11 @@ function updateInputWord(event)
     inputWord = event.target.value;
 }
 
-function usless()
+function useless()
 {
     spawnAsteroid(k);
     k++;
 }
 
-setInterval(usless, spawnlevel);
+setInterval(useless, spawnlevel);
 updateGame();
