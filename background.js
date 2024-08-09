@@ -2,7 +2,7 @@ let params = new URLSearchParams(window.location.search);
 const canvas = document.getElementById('backd');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight + 1000;
+canvas.height = window.innerHeight;
 document.getElementById('song').loop = true;
 
 const words = ["cat", "dog", "bird", "fish", "tree", "house", "car", "bike", "road", "sky",
@@ -19,9 +19,8 @@ const words = ["cat", "dog", "bird", "fish", "tree", "house", "car", "bike", "ro
 "chlorine", "argon", "krypton", "neon", "xenon", "radon"];
 let asteroids = [];
 
-const spawnlevel = 50;
+const spawnlevel = 20;
 const wordspeed = 7;
-const asteroidFrequency = 50;
 
 class Asteroid
 {
@@ -51,7 +50,7 @@ function spawnAsteroid()
 {
     xrandom.push(Math.random() * (canvas.width) * 0.9);
     const word = words[Math.floor(Math.random() * words.length)];
-    asteroids.push(new Asteroid(word, xrandom[xrandom.length - 1] , 500, wordspeed));
+    asteroids.push(new Asteroid('.', xrandom[xrandom.length - 1] , -50, wordspeed));
 }
 
 function updateGame()
