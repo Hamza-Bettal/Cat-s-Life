@@ -28,7 +28,7 @@ class Asteroid
         const dx = this.x - player.x;
         const dy = this.y - player.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
-        return (distance + 5 < this.size + player.size);
+        return (distance + 15 < this.size + player.size);
     }
     draw()
     {
@@ -62,9 +62,6 @@ class Player
         let playerImage = new Image();
         playerImage.src = "imgs/airplane.png";
         ctx.drawImage(playerImage, this.x - 50, this.y - 50, 100, 100);
-        // ctx.beginPath();
-        // ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, true);
-        // ctx.fill();
     }
 }
 
