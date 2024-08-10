@@ -125,13 +125,13 @@ function updateGame()
         if (asteroid.y > canvas.height - 210)
         {
             var sound = document.querySelector('#song');
-            sound.src = 'die.mp3';
+            sound.src = 'sounds/die.mp3';
             sound.load();   
             sound.play();
             sound.loop = false;
             const img = document.getElementById('cat');
             img.style = 'width: 210px; margin-right: 90px;';
-            img.src = 'kitnnhit.png';
+            img.src = 'imgs/kitnnhit.png';
             if (score > localStorage.getItem('highScore'))
                 localStorage.setItem('highScore', score);
             if (highScore === null)

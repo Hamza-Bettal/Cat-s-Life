@@ -118,7 +118,7 @@ function updateGame()
         if (asteroid.isCollidingWith(player))
         {
             var song = document.querySelector('#song');
-            song.src = 'die.mp3';
+            song.src = 'sounds/die.mp3';
             song.load();
             song.play();
             song.loop = false;

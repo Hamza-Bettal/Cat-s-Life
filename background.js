@@ -50,7 +50,7 @@ function spawnAsteroid()
 {
     xrandom.push(Math.random() * (canvas.width) * 0.9);
     const word = words[Math.floor(Math.random() * words.length)];
-    asteroids.push(new Asteroid('.', xrandom[xrandom.length - 1] , -50, wordspeed));
+    asteroids.push(new Asteroid(word, xrandom[xrandom.length - 1] , -50, wordspeed));
 }
 
 function updateGame()
