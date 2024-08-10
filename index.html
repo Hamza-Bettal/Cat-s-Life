@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <title>Quick Type, Cat's Life</title>
+    <title>Cat's Life</title>
     <style>
-        body
-        {
+        body {
             margin: 0;
             overflow: hidden;
             font-family: 'VT323', monospace;
@@ -16,34 +15,36 @@
             text-align: center;
             background-size: cover;
             background-repeat: no-repeat;
-   	 		user-select: none; 
+            user-select: none;
+            height: 100vh;
+            width: 100vw;
         }
-        /* #backd, h1, button, p
-        {
-            position: absolute;
-        }
-        #backd
-        {
-            z-index: 1;
-        } */
-        h1
-        {
+        h1 {
             font-size: calc(4rem + 2vw);
             margin: 5% 0;
             color: #FFCC00;
-			text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            z-index: 2;
+            position: relative;
+        }
+        #backd {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;    
+            justify-content: center; 
+            margin-top: 2rem;
+            position: relative;
             z-index: 2;
         }
-        .button-container
-        {
-			display: flex;
-   			flex-direction: column; 
-   			align-items: center;    
-   			justify-content: center; 
-			margin-top: 2rem;
-        }
-        button
-        {
+        button {
             font-size: 60px;
             width: 30%;
             max-width: 700px;
@@ -55,35 +56,31 @@
             border: none;
             margin: 10px;
             font-family: 'VT323', monospace;
+            position: relative;
             z-index: 2;
         }
-        button:hover
-        {
+        button:hover {
             cursor: pointer;
             background-color: lightblue;
             color: #222;
             transition: 0.5s;
-			transform: scale(1.05);
+            transform: scale(1.05);
         }
-        button:active
-        {
+        button:active {
             transition: 0.1s;
             background-color: #111;
             color: lightblue;
         }
-		@media (max-width: 768px)
-        {
-            button
-            {
+        @media (max-width: 768px) {
+            button {
                 width: 70%;
                 font-size: 40px;
             }
-		}
-
+        }
     </style>
 </head>
 <body>
-    <h1>Quick Type, Cat's Life</h1>
+    <h1>Cat's Life</h1>
     <canvas id="backd"></canvas>
     <audio src="sounds/backgroudmusic.mp3" autoplay id="song"></audio>
     <div class="button-container">
@@ -93,6 +90,8 @@
         <button onclick="window.location='settings.html'">Settings</button>
         <button onclick="window.location='quit.html'">Quit</button>
     </div>
-    <!-- <script src="background.js"></script> -->
+    <script src="background.js"></script> 
 </body>
 </html>
+
+
