@@ -66,11 +66,11 @@ class Player
     {
         let playerImage = new Image();
         playerImage.src = "imgs/airplane.png";
-        ctx.drawImage(playerImage, this.x - 50, this.y - 50, 100, 100);
+        ctx.drawImage(playerImage, this.x - 75, this.y - 75, 150, 150);
     }
 }
 
-let player = new Player(canvas.width / 2, canvas.height / 2, 20);
+let player = new Player(canvas.width / 2, canvas.height / 2, 30);
 let xrandom = [];
 
 function mousepos(event)

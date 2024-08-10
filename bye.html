@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <title>Quit Game</title>
+    <title>Goodbye</title>
     <style>
         body {
             margin: 0;
@@ -12,15 +12,13 @@
             background-color: #000;
             color: #fff;
             text-align: center;
-            background-image: url('path/to/your/background-image.jpg'); 
-            background-size: cover;
             background-repeat: no-repeat;
             user-select: none;
         }
         h1 {
             font-size: calc(4rem + 2vw);
             margin: 5% 0;
-            color: #FFCC00;
+            color: #FFD700; /* Gold color */
             text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
         }
         .container {
@@ -31,21 +29,28 @@
             margin: 2rem auto;
             max-width: 90%;
         }
-        .description-card {
-            background-color: rgba(50, 50, 50, 0.8);
+        .goodbye-card {
+            background-color: rgba(30, 30, 30, 0.85); /* Slightly transparent dark background */
             border-radius: 15px;
-            padding: 20px;
+            padding: 30px;
             max-width: 600px;
             margin: 20px auto;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
-            border: 2px solid lightblue;
+            border: 2px solid lightblue; /* Gold border */
         }
-        .description {
-            font-size: 1.4rem;
+        .message {
+            font-size: 1.6rem;
             margin: 0;
-            line-height: 1.6;
+            line-height: 1.8;
             color: #e0e0e0;
             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+        }
+        .goodbye-image {
+            margin-top: 20px;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+            border: 2px solid lightblue; /* Gold border for image */
         }
         .button-container {
             display: flex;
@@ -55,37 +60,40 @@
             margin-top: 20px;
         }
         button {
-            color: lightblue; 
+            color: lightblue; /* Gold text */
             font-family: 'VT323', monospace;
             font-size: 1.2rem;
-            border: 2px solid lightblue;
+            border: 2px solid lightblue; /* Gold border */
             padding: 10px 20px;
             border-radius: 10px;
-            background-color: #333;
+            background-color: #333; /* Dark background for button */
+            text-decoration: none;
         }
         button:hover {
-            background-color: lightblue;
-            color: #222;
+            background-color: lightblue; /* Gold background on hover */
+            color: #222; /* Dark text on gold background */
             transition: 0.5s;
             cursor: pointer;
-			transform: scale(1.05);
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
-    <h1>Are You Sure?</h1>
+    <h1>Goodbye!</h1>
     
     <div class="container">
-        <div class="description-card" role="alert">
-            <p class="description">
-                Are you sure you want to quit the game?<br><br>
-                Your progress will not be saved.
+        <div class="goodbye-card">
+            <p class="message">
+                Thank you for playing! We hope you enjoyed the game.<br><br>
+                <em>Come back soon!</em>
             </p>
+            <img src="imgs/waving_kitten.png" alt="Farewell Image" class="goodbye-image">
         </div>
         <div class="button-container">
-            <button onclick="window.location='bye.html'" aria-label="Quit the game">Yes, Quit</button>
-            <button onclick="window.location='index.html'" aria-label="Return to game">No, Return to Home</button>
+            <button onclick="window.location='index.html'" aria-label="Return to Home">Return to Home</button>
         </div>
     </div>
 </body>
 </html>
+
+

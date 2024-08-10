@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <title>Game Descriptions</title>
+    <title>Settings</title>
     <style>
         body {
             margin: 0;
             font-family: 'VT323', monospace;
-            background-color: #000; /* Black background for high contrast */
-            color: #fff; /* White text for readability */
+            background-color: #000; /* Black background */
+            color: #fff; /* White text */
             text-align: center;
             background-image: url('path/to/your/background-image.jpg'); /* Background image */
             background-size: cover;
@@ -31,27 +31,35 @@
             margin: 2rem auto;
             max-width: 80%;
         }
-        .description-card {
+        .settings-card {
             background-color: rgba(30, 30, 30, 0.8); /* Darker background for cards */
             border-radius: 15px;
             padding: 20px;
             max-width: 90%;
+            width: 600px; /* Fixed width */
             margin: 10px 0;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
-            border: 3px solid lightblue; /* Consistent bright blue border */
+            border: 3px solid lightblue; /* Bright blue border */
         }
-        .description-card h2 {
+        .settings-card h2 {
             font-size: 2rem;
             margin-bottom: 1rem;
             color: lightblue; /* Bright blue for titles */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
-        .description {
-            font-size: 1.2rem;
-            margin: 0;
-            line-height: 1.6;
+        .setting-option {
+            margin: 10px 0;
+            font-size: 1.4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             color: #e0e0e0; /* Light grey text for readability */
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+        }
+        .setting-option label {
+            margin-right: 20px;
+        }
+        .setting-option input[type="range"] {
+            width: 60%;
         }
         button {
             color: lightblue; /* Bright blue text */
@@ -59,7 +67,7 @@
             font-size: 1.2rem;
             margin-top: 20px;
             display: inline-block;
-            border: 3px solid lightblue; /* Consistent bright blue border */
+            border: 3px solid lightblue; /* Bright blue border */
             padding: 10px 20px;
             border-radius: 10px;
             background-color: #333; /* Dark background for button */
@@ -75,33 +83,46 @@
     </style>
 </head>
 <body>
-    <h1>Game Descriptions</h1>
+    <h1>Settings</h1>
     
     <div class="container">
-        <div class="description-card">
-            <h2>Quick Type, Cat's Life</h2>
-            <p class="description">
-                <strong>Welcome to Quick Type, Cat's Life!</strong><br><br>
-                Our lovable cat is under threat as words rain down from above. Your typing skills are the only thing standing between the cat and danger.<br><br>
-                <em>Keep the cat safe by typing each word before it hits the cat. The faster you type, the better you protect your furry friend!</em><br><br>
-                <strong>Get ready for a typing challenge like no other. Can you save the cat?</strong>
-            </p>
+        <div class="settings-card">
+            <h2>Audio Settings</h2>
+            <div class="setting-option">
+                <label for="volume">Volume:</label>
+                <input type="range" id="volume" name="volume" min="0" max="100" value="50">
+            </div>
+            <div class="setting-option">
+                <label for="music">Music:</label>
+                <input type="checkbox" id="music" name="music" checked>
+            </div>
         </div>
 
-        <div class="description-card">
-            <h2>Avoid the Falling Shapes</h2>
-            <p class="description">
-                <strong>Welcome to Avoid the Falling Shapes!</strong><br><br>
-                In this game, you'll guide a cat to dodge falling squares and circles. The longer you survive, the higher your score!<br><br>
-                <em>Use your quick reflexes to navigate the cat through the screen and avoid the shapes. Each shape you avoid adds to your score, but get hit and it's game over!</em><br><br>
-                <strong>Can you keep the cat safe and score high?</strong>
-            </p>
+        <div class="settings-card">
+            <h2>Game Settings</h2>
+            <div class="setting-option">
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty" name="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="normal" selected>Normal</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <div class="setting-option">
+                <label for="controls">Controls:</label>
+                <select id="controls" name="controls">
+                    <option value="keyboard" selected>Keyboard</option>
+                    <option value="mouse">Mouse</option>
+                    <option value="touch">Touch</option>
+                </select>
+            </div>
         </div>
         
-        <button onclick="window.location='index.html'">Back to Home</button>
+        <button onclick="window.location='index.html'">Save & Back to Home</button>
     </div>
 </body>
 </html>
+
 
 
 
