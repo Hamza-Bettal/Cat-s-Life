@@ -25,10 +25,15 @@ class Asteroid
     }
     isCollidingWith(player)
     {
-        const dx = this.x - player.x;
-        const dy = this.y - player.y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        return (distance + 15 < this.size + player.size);
+        if (this.shape === 'circle')
+        {
+            const dx = this.x - player.x;
+            const dy = this.y - player.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            return (distance < this.size + player.size);
+        }
+        else if (this.shape === 'square')
+            return (this.x < player.x + player.size && this.x + this.size > player.x && this.y < player.y + player.size && this.y + this.size > player.y);
     }
     draw()
     {
