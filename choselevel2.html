@@ -2,67 +2,96 @@
 <html lang="en">
 <head>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <title>Words raining</title>
+    <title>Words Raining</title>
+	<link rel="stylesheet" href="style.css">
     <style>
-        body
-        {
+        body {
             overflow: hidden;
             font-family: 'VT323', monospace;
-            background-color: #111;
+            background: #000;
             color: #fff;
             text-align: center;
-            user-select: none;
+            user-select: none;	
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
         }
-        h1
-        {
-            font-size: 100px;
-            margin-top: 100px;
+        h1 {
+            font-size: calc(4rem + 2vw); /* Responsive font size */
+            color: #FFCC00; /* Gold color */
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            margin: 5% 0; /* Margin for spacing */
+            position: relative;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;	
+            margin-top: 2rem;
+			width: 15vmax;
+        }
+        button{
+            font-size: 1.8rem; /* Slightly smaller font size */
+            width: 90%; /* Responsive width */
+            max-width: 600px; /* Maximum width */
+            background: linear-gradient(145deg, #333, #444); /* Gradient background */
+            color: lightblue; /* Light blue text color */
+            border-radius: 12px; /* Rounded corners */
+            padding: 15px; /* Padding for size */
+            border: none;
+            margin: 10px;
             font-family: 'VT323', monospace;
+            outline: none; /* Remove default outline */
+			transition: 0.3s;
         }
-        button
-        {
-            margin: 15px;
-            font-size: 80px;
-            background-color: #111;
-            color: white;
-            border-radius: 15px;
-            padding: 5px;
-            font-family: 'VT323', monospace;
-        }
-        button:hover
-        {
+		.btn1:hover
+		{
+			background: linear-gradient(120deg, crimson, yellow);
+		}
+		.btn2:hover
+		{
+			background: linear-gradient(120deg, lightgreen, yellow);
+		}
+		.btn3:hover
+		{
+			background: linear-gradient(120deg, blue, yellow);
+		}
+		.btn4:hover
+		{
+			background: linear-gradient(120deg, violet, yellow);
+		}
+		.btn5:hover
+		{
+			background: linear-gradient(120deg, darkviolet, lightgreen);
+		}
+        button:hover {
             cursor: pointer;
-            background-color: black;
-            color: #111;
-            transition: 1s;
+            color: #222; /* Dark text on hover */
+            transform: scale(1.05); /* Slight scale effect */
+            background: lightblue; /* Background color on hover */
+            box-shadow: 0 0 0 4px lightblue; /* Match shape with box-shadow */
         }
-        button:active
-        {
-            transition: 0.2s;
-            background-color: #111;
-            color: white;
-        }
-        @keyframes rainbow
-        {
-            0% { background-color: red; }
-            14% { background-color: orange; }
-            28% { background-color: yellow; }
-            42% { background-color: green; }
-            57% { background-color: blue; }
-            71% { background-color: indigo; }
-            85% { background-color: violet; }
-            100% { background-color: red; }
+        button:active {
+            background: linear-gradient(145deg, #222, #333); /* Darker gradient on click */
+            color: lightblue; /* Light blue text color */
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Reduced shadow on click */
+            transition: background 0.1s; /* Quick transition on click */
         }
     </style>
 </head>
 <body>
-    <h1>difficulty</h1>
-    <audio src="sounds/backgroudmusic.mp3" autoplay ></audio>
-    <button onclick="window.location='game2.html?level=1'" style="background-color: lightgreen; ">Easy</button><br>
-    <button onclick="window.location='game2.html?level=2'" style="background-color: lightsalmon;">Medium</button><br>
-    <button onclick="window.location='game2.html?level=3'" style="background-color: red;">Hard</button><br>
-    <button onclick="window.location='game2.html?level=4'" style="background-color: rgb(247, 14, 247);">Insane</button><br>
-    <button onclick="window.location='game2.html?level=5'" style="animation: rainbow 1s infinite linear;">Impossible</button><br>
-    <button onclick="window.location='chosegame.html'" style="color: lightblue;">Back</button>
+    <h1>Difficulty</h1>
+    <audio src="sounds/backgroudmusic.mp3" autoplay></audio>
+    <div class="button-container">
+        <button onclick="window.location='game2.html?level=1'" class="btn btn1">Easy</button>
+        <button onclick="window.location='game2.html?level=2'" class="btn btn2">Medium</button>
+        <button onclick="window.location='game2.html?level=3'" class="btn btn3">Hard</button>
+        <button onclick="window.location='game2.html?level=4'" class="btn btn4">Insane</button>
+        <button onclick="window.location='game2.html?level=5'" class="btn btn5">Impossible</button>
+        <button onclick="window.location='chosegame.html'">Back</button>
+    </div>
 </body>
 </html>
