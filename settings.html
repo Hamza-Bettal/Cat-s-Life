@@ -6,24 +6,27 @@
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <title>Settings</title>
     <style>
-        body {
+        body
+        {
             margin: 0;
             font-family: 'VT323', monospace;
-            background-color: #000; /* Black background */
-            color: #fff; /* White text */
+            background-color: #000;
+            color: #fff;
             text-align: center;
-            background-image: url('path/to/your/background-image.jpg'); /* Background image */
+            background-image: url('path/to/your/background-image.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             user-select: none;
         }
-        h1 {
+        h1
+        {
             font-size: calc(3rem + 2vw);
             margin: 2% 0;
-            color: #FFD700; /* Gold color for header */
+            color: #FFD700;
             text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
         }
-        .container {
+        .container
+        {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -31,51 +34,58 @@
             margin: 2rem auto;
             max-width: 80%;
         }
-        .settings-card {
-            background-color: rgba(30, 30, 30, 0.8); /* Darker background for cards */
+        .settings-card
+        {
+            background-color: rgba(30, 30, 30, 0.8);
             border-radius: 15px;
             padding: 20px;
             max-width: 90%;
-            width: 600px; /* Fixed width */
+            width: 600px;
             margin: 10px 0;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
-            border: 3px solid lightblue; /* Bright blue border */
+            border: 3px solid lightblue;
         }
-        .settings-card h2 {
+        .settings-card h2
+        {
             font-size: 2rem;
             margin-bottom: 1rem;
-            color: lightblue; /* Bright blue for titles */
+            color: lightblue;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
-        .setting-option {
+        .setting-option
+        {
             margin: 10px 0;
             font-size: 1.4rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: #e0e0e0; /* Light grey text for readability */
+            color: #e0e0e0;
         }
-        .setting-option label {
+        .setting-option label
+        {
             margin-right: 20px;
         }
-        .setting-option input[type="range"] {
+        .setting-option input[type="range"]
+        {
             width: 60%;
         }
-        button {
-            color: lightblue; /* Bright blue text */
+        button
+        {
+            color: lightblue;
             font-family: 'VT323', monospace;
             font-size: 1.2rem;
             margin-top: 20px;
             display: inline-block;
-            border: 3px solid lightblue; /* Bright blue border */
+            border: 3px solid lightblue;
             padding: 10px 20px;
             border-radius: 10px;
-            background-color: #333; /* Dark background for button */
+            background-color: #333;
             text-decoration: none;
         }
-        button:hover {
-            background-color: lightblue; /* Bright blue background on hover */
-            color: #222; /* Dark text on bright background */
+        button:hover
+        {
+            background-color: lightblue;
+            color: #222;
             transition: 0.5s;
             cursor: pointer;
             transform: scale(1.05);

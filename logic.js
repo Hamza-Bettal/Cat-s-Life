@@ -11,18 +11,25 @@ canvas.width = window.innerWidth - 300;
 canvas.height = window.innerHeight;
 let highScore = localStorage.getItem('highScore');
 
-const words = ["cat", "dog", "bird", "fish", "tree", "house", "car", "bike", "road", "sky",
-"cloud", "rain", "sun", "moon", "star", "space", "planet", "comet", "galaxy",
-"universe", "ocean", "river", "lake", "mountain", "valley", "forest", "desert",
-"beach", "wave", "tide", "current", "whale", "dolphin", "shark", "octopus",
-"crab", "lobster", "shrimp", "jellyfish", "coral", "reef", "fish", "seal",
-"penguin", "polar", "bear", "walrus", "iceberg", "glacier", "snow", "hail",
-"storm", "thunder", "lightning", "tornado", "hurricane", "earthquake", "volcano",
-"eruption", "lava", "ash", "rock", "mineral", "gem", "crystal", "diamond",
-"ruby", "sapphire", "emerald", "gold", "silver", "bronze", "copper", "iron",
-"steel", "aluminum", "titanium", "platinum", "zinc", "lead", "mercury", "helium",
-"hydrogen", "oxygen", "nitrogen", "carbon", "silicon", "phosphorus", "sulfur",
-"chlorine", "argon", "krypton", "neon", "xenon", "radon"];
+const words = ["cat", "dog", "bat", "rat", "hat", "sun", "fun", "run", "lake", "mountain",
+                "valley", "forest", "desert", "beach", "wave", "tide", "current", "whale",
+                "dolphin", "shark", "octopus", "crab", "lobster", "shrimp", "jellyfish",
+                "coral", "reef", "fish", "seal", "penguin", "polar", "bear", "walrus",
+                "iceberg", "glacier", "snow", "hail", "storm", "thunder", "lightning",
+                "tornado", "hurricane", "earthquake", "volcano", "eruption", "lava",
+                "ash", "rock", "mineral", "gem", "crystal", "diamond", "ruby", "sapphire",
+                "emerald", "gold", "pit", "sit", "hit", "fit", "bit", "tap", "map",
+                "cap", "nap", "lap", "pat", "bag", "rag", "tag", "log", "fog", "bog",
+                "dot", "cot", "hot", "lake", "mountain", "valley", "forest", "desert",
+                "beach", "wave", "tide", "current", "whale", "dolphin", "shark", "octopus",
+                "crab", "lobster", "shrimp", "jellyfish", "coral", "reef", "fish", "seal",
+                "penguin", "polar", "bear", "walrus", "iceberg", "glacier", "snow", "hail",
+                "storm", "thunder", "lightning", "tornado", "hurricane", "earthquake",
+                "volcano", "eruption", "lava", "ash", "rock", "mineral", "gem", "crystal",
+                "diamond", "ruby", "sapphire", "emerald", "gold", "lot", "pot", "not",
+                "pen", "ten", "men", "hen", "red", "led", "bed", "net", "wet", "jet",
+                "pet", "bun", "gun", "sun", "tin", "win", "fin", 
+                "bin", "fan", "man", "pan", "can", "tan"];
 let asteroids = [];
 let inputWord = "";
 let score = 0;

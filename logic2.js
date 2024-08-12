@@ -133,7 +133,6 @@ function updateGame()
                 besttime = 0;
             if (time > +besttime)
             {
-                console.log('new highscore');
                 besttime = time.toFixed(2);
                 localStorage.setItem('besttime', besttime);
             }

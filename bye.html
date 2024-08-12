@@ -6,7 +6,8 @@
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <title>Goodbye</title>
     <style>
-        html, body {
+        html, body
+        {
             height: 100%;
             margin: 0;
             font-family: 'VT323', monospace;
@@ -16,65 +17,74 @@
             background-repeat: no-repeat;
             user-select: none;
         }
-        body {
+        body
+        {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            overflow: hidden; /* Hide overflow to prevent scrolling */
+            overflow: hidden;
         }
-        h1 {
+        h1
+        {
             font-size: calc(2rem + 4vw);
             margin: 0;
-            color: #FFD700; /* Gold color */
+            color: #FFD700;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
-        .container {
+        .container
+        {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
         }
-        .goodbye-card {
-            background-color: rgba(30, 30, 30, 0.85); /* Slightly transparent dark background */
+        .goodbye-card
+        {
+            background-color: rgba(30, 30, 30, 0.85);
             border-radius: 15px;
             padding: 20px;
             max-width: 90%;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
-            border: 2px solid lightblue; /* Gold border */
+            border: 2px solid lightblue;
             box-sizing: border-box;
         }
-        .message {
+        .message
+        {
             font-size: calc(1rem + 1.5vw);
             margin: 0;
             line-height: 1.4;
             color: #e0e0e0;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
         }
-        .goodbye-image {
+        .goodbye-image
+        {
             margin-top: 20px;
             width: 80%;
             max-width: 300px;
             border-radius: 10px;
-            border: 2px solid lightblue; /* Gold border for image */
+            border: 2px solid lightblue;
         }
-        .button-container {
+        .button-container
+        {
             margin-top: 20px;
         }
-        button {
-            color: lightblue; /* Gold text */
+        button
+        {
+            color: lightblue;
             font-family: 'VT323', monospace;
             font-size: calc(0.8rem + 1vw);
-            border: 2px solid lightblue; /* Gold border */
+            border: 2px solid lightblue;
             padding: 10px 20px;
             border-radius: 10px;
-            background-color: #333; /* Dark background for button */
+            background-color: #333;
             text-decoration: none;
             cursor: pointer;
         }
-        button:hover {
-            background-color: lightblue; /* Gold background on hover */
-            color: #222; /* Dark text on gold background */
+        button:hover
+        {
+            background-color: lightblue;
+            color: #222;
             transition: 0.5s;
             transform: scale(1.05);
         }
