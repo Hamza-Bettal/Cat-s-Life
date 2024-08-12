@@ -1,21 +1,25 @@
-@media (max-width: 768px) {
-    button {
-        width: 90%; /* Full width on small screens */
-        font-size: 1.5rem; /* Adjust font size */
+@media (max-width: 768px)
+{
+    button
+	{
+        width: 90%;
+        font-size: 1.5rem;
     }
 	}
 
-@media (max-width: 1100px) {
+@media (max-width: 1100px)
+{
 	h1
 	{
-		font-size: calc(4rem + 2vw); /* Responsive font size */
-		color: #FFCC00; /* Gold color */
+		font-size: calc(4rem + 2vw);
+		color: #FFCC00;
 		text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
-		margin: 0 0; /* Margin for spacing */
+		margin: 0 0;
 		position: relative;
 	}
-    button {
-        width: 90%; /* Full width on small screens */
-        font-size: 1.5rem; /* Adjust font size */
+    button
+	{
+        width: 90%;
+        font-size: 1.5rem;
     }
 }
