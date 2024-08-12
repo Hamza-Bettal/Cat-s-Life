@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+        <style>
+            body
+            {
+                margin: 0;
+                overflow: hidden;
+                font-family: 'VT323', monospace;
+                background-color: #000;
+                color: #fff;
+                text-align: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                user-select: none;
+                height: 100vh;
+                width: 100vw;
+            }
+            h1
+            {
+                font-size: calc(4rem + 2vw);
+                margin: 5% 0;
+                color: #FFCC00;
+                text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+                z-index: 2;
+                position: relative;
+                font-family: 'VT323', monospace;
+            }
+            table
+            {
+                border-collapse: collapse;
+                width: 50%;
+                margin: 0 auto;
+                font-family: 'VT323', monospace;
+            }
+            th, td
+            {
+                border: 1px solid #FFCC00;
+                padding: 8px;
+                font-size: 2rem;
+                text-align: center;
+                font-family: 'VT323', monospace;
+            }
+            button
+            {
+                font-size: 1.8rem;
+                width: 15%;
+                max-width: 600px;
+                background: linear-gradient(145deg, #333, #444);
+                color: lightblue;
+                border-radius: 12px;
+                padding: 15px;
+                border: none;
+                margin: 60px;
+                font-family: 'VT323', monospace;
+                outline: none;
+                transition: 0.3s;
+            }
+            button:hover
+            {
+                background: lightblue;
+                color: #222;
+                transition: 0.5s;
+            }
+            button:active
+            {
+                background: #222;
+                color: lightblue;
+                transition: 0.3s;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Highscores</h1>
+        <div>
+            <table>
+                <tr>
+                    <th>Rank</th>
+                    <th>Username</th>
+                    <th>Score</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Player1</td>
+                    <td>490</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Player2</td>
+                    <td>400</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Player3</td>
+                    <td>366</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Player4</td>
+                    <td>290</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Player5</td>
+                    <td>220</td>
+                </tr>
+            </table>
+            <button onclick="window.location='index.html'">Back</button>
+        </div>
+        <audio src="sounds/backgroudmusic.mp3" autoplay></audio>
+    </body>
+</html>
