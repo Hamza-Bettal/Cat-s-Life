@@ -102,6 +102,30 @@ let timeInt = setInterval(function()
     speed += 0.3;
 }, 3000);
 
+function showMessage(msg)
+{
+    let messageDiv = document.createElement('div');
+
+    messageDiv.style = 'right: 40px; top: 40px; position: absolute; font-size: 40px; opacity: 0; transition: opacity 1s; user-select: none;';
+    messageDiv.textContent = msg;
+    document.body.appendChild(messageDiv);
+
+    setTimeout(function()
+    {
+        messageDiv.style.opacity = '1';
+    }, 100);
+
+    setTimeout(function()
+    {
+        messageDiv.style.opacity = '0';
+        setTimeout(function()
+        {
+            document.body.removeChild(messageDiv);
+        }, 2000);
+    }, 3000 / level);
+}
+showMessage('Click Esc to pause the game');
+
 let animationFrameId;
 
 function updateGame()
