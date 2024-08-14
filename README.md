@@ -10,3 +10,5 @@ Words are raining down, threatening the cat's safety! Your fast and accurate typ
 Guide the cat to dodge falling squares and circles in a test of reflexes. Move swiftly to navigate through the screen, avoiding the shapes at all costs. Each successful dodge boosts your score, but one hit and it's game over!
 
 #Are you up for the challenge? Save the cat and prove your skills in both games!
+
+To play the game, **[click here](https://cat-s-life.vercel.app/)**.
