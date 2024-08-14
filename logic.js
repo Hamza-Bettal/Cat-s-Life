@@ -101,7 +101,9 @@ function spawnAsteroid(k)
     console.log(xrandom);
 }
 
+
 let player = new Player(firstpos);
+let animationFrameId;
 function updateGame()
 {
     let i = 0;
@@ -109,6 +111,7 @@ function updateGame()
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     while (i < asteroids.length)
     {
+        
         const asteroid = asteroids[i];
         asteroid.update();
         asteroid.draw();
@@ -150,7 +153,7 @@ function updateGame()
         }
         i++;
     }
-    requestAnimationFrame(updateGame);
+    animationFrameId = requestAnimationFrame(updateGame);
 }
 
 function restartGame()
@@ -159,6 +162,14 @@ function restartGame()
     console.log(level);
     window.location = 'game.html?level=' + level;
 }
+
+function ResumeGame()
+{
+    requestAnimationFrame(updateGame);
+    setInterval(useless, spawnlevel);
+    document.getElementById('pauseScreen').style.display = 'none';
+}
+
 wordInput.addEventListener('input', updateInputWord);
 
 function updateInputWord(event)
@@ -172,5 +183,16 @@ function useless()
     k++;
 }
 
-setInterval(useless, spawnlevel);
+let thegame = setInterval(useless, spawnlevel);
+
+document.addEventListener('keydown', function(event)
+{
+    if (event.key === 'Escape')
+    {
+        cancelAnimationFrame(animationFrameId);
+        clearInterval(thegame);
+        document.getElementById('pauseScreen').style.display = 'block';
+    }
+});
+
 updateGame();

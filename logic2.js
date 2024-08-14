@@ -94,13 +94,15 @@ setInterval(function()
     time += 0.01;
 }, 10);
 
-setInterval(function()
+let timeInt = setInterval(function()
 {
     spawnlevel -= 3;
     if (spawnlevel < 10)
         spawnlevel = 10;
     speed += 0.3;
 }, 3000);
+
+let animationFrameId;
 
 function updateGame()
 {
@@ -143,7 +145,7 @@ function updateGame()
         }
         i++;
     }
-    requestAnimationFrame(updateGame);
+    animationFrameId = requestAnimationFrame(updateGame);
 }
 
 function restartGame()
@@ -152,5 +154,23 @@ function restartGame()
     window.location = 'game2.html?level=' + level;
 }
 
-setInterval(spawnAsteroid, spawnlevel);
+function resumeGame()
+{
+    document.getElementById('pauseScreen').style.display = 'none';
+    setInterval(spawnAsteroid, spawnlevel);
+    animationFrameId = requestAnimationFrame(updateGame);
+}
+
+let thegame = setInterval(spawnAsteroid, spawnlevel);
+
+document.addEventListener('keydown', function(event)
+{
+    if (event.key === 'Escape')
+    {
+        cancelAnimationFrame(animationFrameId);
+        clearInterval(thegame);
+        clearInterval(timeInt);
+        document.getElementById('pauseScreen').style.display = 'block';
+    }
+});
 updateGame();
