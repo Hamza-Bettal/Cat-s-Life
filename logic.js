@@ -1,7 +1,8 @@
 let params = new URLSearchParams(window.location.search);
 let level = params.get('level');
 if (level === null)
-    level = 5;
+    level = 1;
+localStorage.setItem('currentlevel', level);
 scorelvl = level;
 document.getElementById('song').loop = true;
 document.getElementById('song').volume = 0.3;
